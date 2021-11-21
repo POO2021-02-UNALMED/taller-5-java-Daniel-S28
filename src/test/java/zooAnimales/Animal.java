@@ -29,13 +29,17 @@ public class Animal {
 			   "Aves:"+ Ave.cantidadAves() + "\n" +
 			   "Reptiles:"+ Reptil.cantidadReptiles() + "\n" +
 			   "Peces:"+Pez.cantidadPeces() + "\n" +
-			   "Anfibios:"+Anfibio.cantidadAnfibios() + "\n";
+			   "Anfibios:"+Anfibio.cantidadAnfibios();
 	}
 	
 	public String toString() {
+		if (zona!=null){
+			return "Mi nombre es " + this.nombre + " tengo una edad de" + this.edad + ", habito en" + 
+					this.habitat + " y mi genero es" + this.genero + 
+					", la zona en la que me ubico es" + zona + ", en el" + zona.getZoo();
+		}
 		return "Mi nombre es " + this.nombre + " tengo una edad de" + this.edad + ", habito en" + 
-				this.habitat + " y mi genero es" + this.genero + 
-				", la zona en la que me ubico es" + zona + ", en el" + zona.getZoo();
+				this.habitat + " y mi genero es" + this.genero;
 	}
 	
 	public String movimiento() {

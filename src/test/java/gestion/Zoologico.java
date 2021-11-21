@@ -17,9 +17,8 @@ public class Zoologico {
 	
 	public int cantidadTotalAnimales() {
 		int total=0;
-		Iterator<Zona> iterator = zonas.iterator();//esto debe devolver el total de animales
-		while(iterator.hasNext()) {
-			total+=iterator.next().cantidadAnimales();
+		for (Zona zona : zonas) {
+			total+=zona.cantidadAnimales();
 		}
 		return total;
 	}
